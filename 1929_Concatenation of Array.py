@@ -6,7 +6,6 @@ Specifically, ans is the concatenation of two nums arrays.
 Return the array ans.
 
 Example 1:
-
 Input: nums = [1,2,1]
 Output: [1,2,1,1,2,1]
 Explanation: The array ans is formed as follows:
@@ -14,11 +13,6 @@ Explanation: The array ans is formed as follows:
 - ans = [1,2,1,1,2,1]
 """
 
-
 class Solution:
     def getConcatenation(self, nums: List[int]) -> List[int]:
-        n = len(nums)
-        ans = [0]*(2*n)
-        for i in range(n):
-            ans[i] = ans[i+n] = nums[i]
-        return ans
+        return nums + nums
